@@ -37,15 +37,16 @@ object wbi {
 
     val result = data.map { line => {
       val fields = line.split(",")
-      val uPopulation = fields(10).replaceAll(",", "")
-      var uPopNum = 0L
-      if (uPopulation.length() > 0)
-        uPopNum = Long.parseLong(uPopulation)
+//      val uPopulation = fields(10).replaceAll(",", "")
+//      var uPopNum = 0L
+//      if (uPopulation.length() > 0)
+//        uPopNum = Long.parseLong(uPopulation)
 
-      (uPopNum, fields(0))
+      //(uPopNum, fields(0))
+      (fields.length)
     }}
-      .sortByKey(false)
-      .take(1)
+//      .sortByKey(false)
+//      .take(1)
 
     result.foreach(println)
 
